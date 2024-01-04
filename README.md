@@ -1,10 +1,8 @@
 # H3Kit
 
-## CAD Files
+- Solidworks files and STL files are available in CAD.
 
-Solidworks files and STL files are available in CAD.
+- A minimal working code is available in Virtual Environment. 
 
-## Code
 
-A minimal working code is available in Virtual Environment. 
 
