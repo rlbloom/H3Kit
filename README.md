@@ -4,5 +4,7 @@
 
 - A minimal working code is available in Virtual Environment. 
 
+- An excel file is also provided which contains the hardware that is required for assembly, along with vendor links.
+
 
 
