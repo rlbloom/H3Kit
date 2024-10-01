@@ -28,7 +28,7 @@ float lastByte = 0;
 
 void setup () {
   // set the window size:
-  size(1080, 720);        
+  size(1920, 1080);        
 
   // List all the available serial ports
   printArray(Serial.list());
@@ -36,7 +36,7 @@ void setup () {
   // Check the listed serial ports in your machine
   // and use the correct index number in Serial.list()[] below.
   // Note that these are indexed from 0, and you are looking for the same port as your ardunio.
-  myPort = new Serial(this, Serial.list()[0], 115200);  //make sure baud rate matches Arduino
+  myPort = new Serial(this, Serial.list()[3], 115200);  //make sure baud rate matches Arduino
 
   // A serialEvent() is generated when a newline character is received :
   myPort.bufferUntil('\n');
@@ -46,7 +46,7 @@ void draw () {
   // everything happens in the serialEvent()
   background(0); //uncomment if you want to control a ball
   stroke(127,34,255);     //stroke color
-  strokeWeight(10);        //stroke wider
+  strokeWeight(50);        //stroke wider
   
   // START EDITING HERE
   
@@ -60,14 +60,15 @@ void draw () {
   
   // draw an ellipse to represent user position
   // if the handle position is less than the wall position, the ellipse follows the handle
+  strokeWeight(10);        //stroke wider
   if (inByte > (x_wall + 25))
   {
-    ellipse(inByte, height/2, 50, 50);
+    ellipse(inByte, height/2, 100, 100);
   }
   // Otherwise, the ellipse stops at the wall
   else 
   {
-    ellipse(x_wall+25, height/2, 50, 50);  // An offset of 25/2 was added so that the user's elliple does not penetrate the wall
+    ellipse(x_wall+50, height/2, 100, 100);  // An offset of 25/2 was added so that the user's elliple does not penetrate the wall
   }
 }
 
